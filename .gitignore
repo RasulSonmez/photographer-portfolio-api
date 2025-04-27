@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnpm/
+.yarn/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# User-uploaded files
+uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build/Artifacts
+build/
+.coverage/
+*.tmp
+*.pid
+
+# Debug
+debug/
+
+# Misc
+*.seed
+*.pid.lock
+*.pem
+*.bak

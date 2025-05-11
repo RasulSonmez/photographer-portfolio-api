@@ -7,6 +7,15 @@ const portfolioCategorySchema = new mongoose.Schema(
       required: [true, "Portföy kategori adı zorunludur"],
       trim: true,
     },
+    status: {
+      type: String,
+      enum: ["active", "passive"],
+      default: "active",
+    },
+    isDeleted: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

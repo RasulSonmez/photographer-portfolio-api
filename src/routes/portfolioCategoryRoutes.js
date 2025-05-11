@@ -12,7 +12,7 @@ router.get("/", protect, index);
 
 router.post("/create", protect, create);
 
-router.put("/edit/:id", protect, edit);
+router.put("/update/:id", protect, edit);
 
 router.delete("/delete/:id", protect, deletedCategory);
 

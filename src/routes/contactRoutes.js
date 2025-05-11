@@ -1,12 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {
-  updateContactInfo,
-  getContactInfo,
-} = require("../controllers/contactController");
+const { updateContactInfo } = require("../controllers/contactInfoclController");
 const protect = require("../middlewares/authMiddleware");
 
-router.put("/", protect, updateContactInfo);
-router.get("/", getContactInfo);
+router.put("/update", protect, updateContactInfo);
 
 module.exports = router;

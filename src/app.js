@@ -8,6 +8,7 @@ const app = express();
 
 const portfolioCategoryRoutes = require("./routes/portfolioCategoryRoutes");
 const authRoutes = require("./routes/authRoutes");
+const contactInfo = require("./routes/contactRoutes");
 connectDB();
 
 app.use(cors());
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/", require("./routes/index"));
 app.use("/api/admin/portfolio-categories", portfolioCategoryRoutes);
+app.use("/api/admin/contact-info", contactInfo);
 
 // app.use("upload", express.static("upload"));
 // app.use('/api/portfolio', require('./routes/portfolioRoutes'));

@@ -9,6 +9,7 @@ const app = express();
 const portfolioCategoryRoutes = require("./routes/portfolioCategoryRoutes");
 const authRoutes = require("./routes/authRoutes");
 const contactInfo = require("./routes/contactRoutes");
+const seo = require("./routes/seoRoutes");
 connectDB();
 
 app.use(cors());
@@ -18,11 +19,7 @@ app.use("/api/auth", authRoutes);
 app.use("/", require("./routes/index"));
 app.use("/api/admin/portfolio-categories", portfolioCategoryRoutes);
 app.use("/api/admin/contact-info", contactInfo);
-
-// app.use("upload", express.static("upload"));
-// app.use('/api/portfolio', require('./routes/portfolioRoutes'));
-// app.use('/api/contact', require('./routes/contactRoutes'));
-// app.use('/api/seo', require('./routes/seoRoutes'));
+app.use("/api/admin/seo", seo);
 
 const PORT = process.env.PORT || 5000;
 
